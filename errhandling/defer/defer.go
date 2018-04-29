@@ -38,5 +38,6 @@ func writeFile(filename string) {
 }
 
 func main() {
+	//tyeDefer()
 	writeFile("fib.txt")
 }

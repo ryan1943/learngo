@@ -2,3 +2,6 @@
 *.exe
 *.EXE
 *.json
+errhandling/defer/debug
+debug
+errhandling/defer/fib.txt
