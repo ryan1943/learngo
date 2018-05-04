@@ -34,10 +34,10 @@ func TestParseCity(t *testing.T) {
 			resultSize, len(result.Items))
 	}
 
-	for i, city := range expectedUsers {
-		if result.Items[i].(string) != city {
+	for i, user := range expectedUsers {
+		if result.Items[i].(string) != user {
 			t.Errorf("expected user %d: %s; but was %s",
-				i, city, result.Items[i].(string))
+				i, user, result.Items[i].(string))
 		}
 	}
 }

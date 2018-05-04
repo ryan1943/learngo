@@ -5,7 +5,6 @@ import (
 	"regexp"
 )
 
-//const cityListRe = `<a href="(http://www.zhenai.com/zhenghun/[a-z0-9]+)"[^>]*>([^<]+)</a>`
 var cityListRe = regexp.MustCompile(`<a href="(http://www.zhenai.com/zhenghun/[a-z0-9]+)"[^>]*>([^<]+)</a>`)
 
 func ParseCityList(contents []byte) engine.ParseResult {
