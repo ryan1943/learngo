@@ -23,8 +23,8 @@ func (s *QueuedScheduler) Run() {
 	s.workerChan = make(chan chan engine.Request)
 	s.requestChan = make(chan engine.Request)
 	go func() {
-		var requestQ []engine.Request
-		var workerQ []chan engine.Request
+		var requestQ []engine.Request     //request队列
+		var workerQ []chan engine.Request //worker队列
 		for {
 			var activeRequest engine.Request
 			var activeWorker chan engine.Request
