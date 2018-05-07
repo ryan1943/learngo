@@ -49,7 +49,7 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 func createWorker(in chan Request, out chan ParseResult, ready ReadyNotifier) {
 	go func() {
 		for {
-			//发送到worker队列去
+			//发送到worker队列去,完成一次工作后再次放回到worker队列去
 			ready.WorkerReady(in)
 			//接收到这里传来的数据 activeWorker <- activeRequest, 可能要等待
 			request := <-in
