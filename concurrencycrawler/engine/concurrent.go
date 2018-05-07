@@ -2,6 +2,7 @@ package engine
 
 import (
 	"learngo/concurrencycrawler/fetcher"
+	"learngo/concurrencycrawler/model"
 	"log"
 )
 
@@ -33,14 +34,22 @@ func (e *ConcurrentEngine) Run(seeds ...Request) {
 	for _, r := range seeds {
 		e.Scheduler.Submit(r) //发送request到scheduler的request队列去
 	}
-	itemCount := 0
+	//itemCount := 0
+	profileCount := 0
 	for {
 		result := <-out
 		for _, item := range result.Items {
-			log.Printf("Got item: #%d: %v", itemCount, item)
-			itemCount++
+			// log.Printf("Got item: #%d: %v", itemCount, item)
+			// itemCount++
+			if _, ok := item.(model.Profile); ok {
+				log.Printf("Got profile #%d: %v", profileCount, item)
+				profileCount++
+			}
 		}
 		for _, request := range result.Requests {
+			// if isDuplicate(request.Url) {
+			// 	continue
+			// }
 			e.Scheduler.Submit(request)
 		}
 	}
