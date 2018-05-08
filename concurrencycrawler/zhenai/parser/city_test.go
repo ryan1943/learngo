@@ -40,4 +40,5 @@ func TestParseCity(t *testing.T) {
 				i, user, result.Items[i].(string))
 		}
 	}
+
 }
