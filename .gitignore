@@ -7,3 +7,5 @@ debug
 errhandling/defer/fib.txt
 ~$go笔记.docx
 ~$go笔记.docx
+.idea
+*.xml

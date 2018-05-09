@@ -1,9 +1,9 @@
 package view
 
 import (
-	"learngo/storagecrawler/engine"
-	"learngo/storagecrawler/frontend/model"
-	common "learngo/storagecrawler/model"
+	"learngo/distributedcrawler/engine"
+	"learngo/distributedcrawler/frontend/model"
+	common "learngo/distributedcrawler/model"
 	"os"
 	"testing"
 )
@@ -33,7 +33,7 @@ func TestSearchResultView_Render(t *testing.T) {
 			Car:        "未购车",
 		},
 	}
-	for i := 0; i < 0; i++ {
+	for i := 0; i < 10; i++ {
 		data.Items = append(data.Items, item)
 	}
 	err = view.Render(outFile, data)
