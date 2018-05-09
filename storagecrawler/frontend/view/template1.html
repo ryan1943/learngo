@@ -52,7 +52,7 @@
                 </tr>
                 {{range .Items}}
                 <tr>
-                    <td><a href="{{.Url}}">{{.Payload.Name}}</a></td>
+                    <td><a href="{{.Url}}" target="view_window">{{.Payload.Name}}</a></td>
                 {{with .Payload}}
                     <td>{{.Gender}}</td>
                     <td>{{.Age}}</td>
