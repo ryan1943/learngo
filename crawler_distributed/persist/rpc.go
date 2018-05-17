@@ -4,7 +4,8 @@ import (
 	"learngo/distributedcrawler/engine"
 	"learngo/distributedcrawler/persist"
 
-	"github.com/labstack/gommon/log"
+	"log"
+
 	"gopkg.in/olivere/elastic.v5"
 )
 

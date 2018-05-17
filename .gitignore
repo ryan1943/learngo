@@ -1,11 +1,9 @@
-.vscode/settings.json
 *.exe
 *.EXE
 *.json
 errhandling/defer/debug
 debug
 errhandling/defer/fib.txt
-~$go笔记.docx
-~$go笔记.docx
 .idea
-*.xml
+*.tmp
+/~$go笔记.docx

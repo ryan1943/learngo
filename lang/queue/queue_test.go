@@ -17,6 +17,6 @@ func ExampleQueue_Pop() {
 	//1
 	//2
 	//false
-	//3
+	//4
 	//true
 }
