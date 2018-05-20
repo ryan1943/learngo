@@ -1,1 +1,0 @@
-# learngo这个项目主要是平时学习golang的代码，其中包括了单任务爬虫，并发爬虫，使用docker和elasticsearch存储数据的并发爬虫
