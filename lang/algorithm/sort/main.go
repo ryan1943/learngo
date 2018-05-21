@@ -182,6 +182,7 @@ func merge(arr []int, left, mid, right int, temp []int) {
 	}
 }
 
+//快速排序
 func QuickSort1(arr []int, left, right int) {
 	if left < right {
 		i := arrAdjust(arr, left, right)
@@ -218,6 +219,7 @@ func arrAdjust(arr []int, left, right int) int {
 	return i
 }
 
+//改进版的快速排序
 func QuickSort2(arr []int, left, right int) {
 	mid := (left + right) / 2
 	arr[left], arr[mid] = arr[mid], arr[left] //可以选择中间的数作为基准
