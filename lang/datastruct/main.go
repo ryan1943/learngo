@@ -1,22 +1,25 @@
 package main
 
 import (
-	"fmt"
-	"learngo/lang/datastruct/linkedlist"
+	"learngo/lang/datastruct/doublelinkedlist"
 )
 
 func main() {
-	list := linkedlist.CreateLinkedList()
+	list := doubleLinkedList.CreateList()
 	s := []int{1, 2, 3, 4, 5, 6, 7}
-	for i, v := range s {
-		list.Insert(i+1, v)
+	for _, v := range s {
+		list.PushBack(v)
 	}
+	//list.Print()
+	list.Modify(5, 55)
 	list.Print()
-	ok := list.Insert(2, 99)
-	if !ok {
-		fmt.Println("insert fail")
-	}
+	list.DeleteVal(7)
 	list.Print()
-	fmt.Println(list.Len())
+	list.PopBack()
+	list.Print()
+	list.PopFront()
+	list.Print()
+	list.Reverse()
+	list.Print()
 
 }

@@ -47,7 +47,7 @@ func (list *LinkedList) Insert(i int, x ElemType) bool {
 		j++
 	}
 	if p == nil || j > i {
-		return false //第i个结点不存在
+		return false //第i-1个结点不存在,第i个也不存在
 	}
 	s := &Node{x, p.Next}
 	p.Next = s
