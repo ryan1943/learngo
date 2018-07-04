@@ -1,2 +1,2 @@
 # learngo
-学习go的练习代码
+haha,这是学习go的练习代码
